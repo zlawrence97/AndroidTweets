@@ -47,9 +47,13 @@ class LoginActivity : AppCompatActivity() {
             // Save the inputted username (usually controlled by Switch)
             val username = usernameEditText.text.toString()
             preferences.edit().putString("SAVED_USERNAME",username).apply()
-            val intent: Intent = Intent(this, TweetsActivity::class.java)
-            intent.putExtra(TweetsActivity.INTENT_KEY_LOCATION, "Washington D.C.")
-//            startActivity(intent)
+            /*val intent = Intent(this, TweetsActivity::class.java).apply{
+                putExtra(TweetsActivity.INTENT_KEY_LOCATION, "Washington D.C.")
+            }
+            startActivity(intent)
+            */
+            val intent = Intent(this, ChooseLocationActivity::class.java)
+//          startActivity(intent)
             val sendTextIntent = Intent().apply {
                 action = Intent.ACTION_SEND
                 type = "text/plain"
