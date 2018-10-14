@@ -22,7 +22,7 @@ class ChooseLocationActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.)
+        setContentView(R.layout.activity_choose_location)
         // Gets a reference to the Google Maps fragment
         val mapFragment = supportFragmentManager
                 .findFragmentById(R.id.map) as SupportMapFragment
